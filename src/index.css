@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  body {
+    background-color: #060610;
+    color: white;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0a18;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2d2d50;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4a4a80;
+  }
+
+  /* Input placeholder */
+  input::placeholder {
+    color: #334155;
+  }
+
+  /* Input focus ring override — handled via Tailwind classes */
+  input {
+    outline: none;
+  }
+}
+
+@layer utilities {
+  .font-syne {
+    font-family: 'Syne', sans-serif;
+  }
+
+  .font-nunito {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  /* Gradient text helper */
+  .text-gradient-violet {
+    @apply bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent;
+  }
+}
