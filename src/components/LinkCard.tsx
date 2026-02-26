@@ -19,7 +19,7 @@ const itemVariants = {
   },
 };
 
-export default function LinkCard({ platform, url, index }: LinkCardProps) {
+export default function LinkCard({ platform, url }: LinkCardProps) {
   const p = PLATFORMS[platform];
   if (!p) return null;
 
