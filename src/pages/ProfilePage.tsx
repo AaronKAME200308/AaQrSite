@@ -26,7 +26,7 @@ export default function ProfilePage({ profile, onEdit }: ProfilePageProps) {
       <AmbientBg />
 
       {/* ── Edit button ── */}
-      <motion.button
+      {/* <motion.button
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 1.1 }}
@@ -37,8 +37,8 @@ export default function ProfilePage({ profile, onEdit }: ProfilePageProps) {
         style={{ fontFamily: "'Syne', sans-serif" }}
       >
         <Pencil size={12} />
-        Modifier
-      </motion.button>
+        Update
+      </motion.button> */}
 
       <div className="relative z-10 max-w-md mx-auto px-4 py-16 flex flex-col items-center">
 
@@ -84,7 +84,7 @@ export default function ProfilePage({ profile, onEdit }: ProfilePageProps) {
           style={{ fontFamily: "'Syne', sans-serif" }}
         >
           <QrCode size={11} />
-          {profile.links.length} réseau{profile.links.length > 1 ? "x" : ""}
+          {profile.links.length} Social{profile.links.length > 1 ? "x" : ""}
         </motion.div>
 
         {/* ── Link cards ── */}
@@ -97,9 +97,9 @@ export default function ProfilePage({ profile, onEdit }: ProfilePageProps) {
           >
             <QrCode size={48} className="opacity-20" />
             <p className="text-sm leading-relaxed">
-              Aucun réseau trouvé.
+              No network found.
               <br />
-              Scannez un QR code valide.
+              Scan a valid QR code.
             </p>
           </motion.div>
         ) : (
@@ -124,7 +124,7 @@ export default function ProfilePage({ profile, onEdit }: ProfilePageProps) {
           style={{ fontFamily: "'Syne', sans-serif" }}
         >
           <Zap size={10} className="text-violet-800" />
-          Linkr · Propulsé par QR code
+          Linkr · Powered by QR code
         </motion.p>
       </div>
     </div>
