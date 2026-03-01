@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Pencil, QrCode, Zap } from "lucide-react";
+import { QrCode, Zap } from "lucide-react";
 import AmbientBg from "../components/AmbientBg";
 import Avatar from "../components/Avatar";
 import LinkCard from "../components/LinkCard";
@@ -20,7 +20,7 @@ const containerVariants = {
   },
 };
 
-export default function ProfilePage({ profile, onEdit }: ProfilePageProps) {
+export default function ProfilePage({ profile }: ProfilePageProps) {
   return (
     <div className="min-h-screen bg-[#060610] text-white relative overflow-hidden">
       <AmbientBg />
@@ -60,7 +60,7 @@ export default function ProfilePage({ profile, onEdit }: ProfilePageProps) {
           className="text-3xl font-black tracking-tight bg-gradient-to-r from-white to-violet-300 bg-clip-text text-transparent mb-2 text-center"
           style={{ fontFamily: "'Syne', sans-serif" }}
         >
-          {profile.name || "Mon Profil"}
+          {profile.name || "My Profile"}
         </motion.h1>
 
         {/* ── Bio ── */}
