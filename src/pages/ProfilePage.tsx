@@ -84,7 +84,7 @@ export default function ProfilePage({ profile }: ProfilePageProps) {
           style={{ fontFamily: "'Syne', sans-serif" }}
         >
           <QrCode size={11} />
-          {profile.links.length} Social{profile.links.length > 1 ? "x" : ""}
+          {profile.links.length} Social{profile.links.length > 1 ? "s" : ""}
         </motion.div>
 
         {/* ── Link cards ── */}
